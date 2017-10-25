@@ -1,0 +1,55 @@
+#: init/gradle-service.js
+msgid "Gradle compile"
+msgstr "Compilación de Gradle"
+
+#: init/gradle-service.js
+msgid "No server selected"
+msgstr "Ningún servidor seleccionado"
+
+#: init/gradle-service.js
+msgid "Gradle task"
+msgstr "Tarea de Gradle"
+
+#: init/gradle-service.js
+msgid "No option selected"
+msgstr "Ninguna opción seleccionada"
+
+#: init/gradle-service.js
+msgid "Starting Gradle task"
+msgstr "Iniciando tarea de Gradle"
+
+#: init/gradle-service.js
+msgid "Gradle task finished"
+msgstr "Tarea de Gradle finalizada"
+
+#: public/form/gradle-service-form.js
+msgid "Server"
+msgstr "Servidor"
+
+#: public/form/gradle-service-form.js
+msgid "Gradle path"
+msgstr "Ruta de Gradle"
+
+#: public/form/gradle-service-form.js
+msgid "Project path"
+msgstr "Ruta del proyecto"
+
+#: public/form/gradle-service-form.js
+msgid "Command"
+msgstr "Comando"
+
+#: public/form/gradle-service-form.js
+msgid "Compile Release"
+msgstr "Compilar versión de lanzamiento"
+
+#: public/form/gradle-service-form.js
+msgid "Compile Debug"
+msgstr "Compilar versión de depuración"
+
+#: public/form/gradle-service-form.js
+msgid "Custom command"
+msgstr "Comando personalizado"
+
+#: public/form/gradle-service-form.js
+msgid "Custom commands or arguments"
+msgstr "Comando personalizado o argumentos"
