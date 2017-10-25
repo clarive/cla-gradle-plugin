@@ -11,6 +11,13 @@
         with_vars: 1
     });
 
+    var userTextField = Cla.ui.textField({
+        name: 'user',
+        fieldLabel: _('User'),
+        value: data.user || '',
+        allowBlank: true
+    });
+
     var gradlePathTextField = Cla.ui.textField({
         name: 'gradlePath',
         fieldLabel: _('Gradle path'),
@@ -28,9 +35,9 @@
         name: 'command',
         fieldLabel: _('Command'),
         data: [
-            ['assembleRelease',_('Compile Release')],
-            ['assembleDebug',_('Compile Debug')],
-            ['custom',_('Custom command')]
+            ['assembleRelease', _('Compile Release')],
+            ['assembleDebug', _('Compile Debug')],
+            ['custom', _('Custom command')]
         ],
         value: data.command || 'assembleRelease',
         allowBlank: false,
@@ -39,11 +46,11 @@
     });
 
     var customParams = Cla.ui.arrayGrid({
-            fieldLabel: _('Custom commands or arguments'),
-            name: 'custom',
-            value: data.custom,
-            description: _('Custom commands or arguments'),
-            default_value: '.'
+        fieldLabel: _('Custom commands or arguments'),
+        name: 'custom',
+        value: data.custom,
+        description: _('Custom commands or arguments'),
+        default_value: '.'
     });
 
 
@@ -63,6 +70,7 @@
         layout: 'form',
         items: [
             gradleServerCombo,
+            userTextField,
             gradlePathTextField,
             appPathTextField,
             commandComboBox,
