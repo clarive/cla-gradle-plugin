@@ -10,7 +10,7 @@ reg.register('service.gradle.task', {
         required: ['server', 'project_path', 'command'],
         allow: ['server', 'project_path', 'command', 'gradle_path', 'user', 'custom_args', 'errors'],
         mapper: {
-            'project_path':'appPath',
+            'project_path': 'appPath',
             'custom_args': 'custom',
             'gradle_path': 'gradlePath'
         },
@@ -21,7 +21,7 @@ reg.register('service.gradle.task', {
                 gradle_path: "C:\programs\gradle\gradle.bat",
                 project_path: "C:\projects\build-project",
                 command: "custom",
-                custom_args:["AssembleRelease"] ,
+                custom_args: ["AssembleRelease"],
                 errors: "fail"
             }
         }]
@@ -29,8 +29,8 @@ reg.register('service.gradle.task', {
     handler: function(ctx, params) {
 
         var reg = require('cla/reg');
-        var fs = require('cla/fs');
         var log = require('cla/log');
+        var ci = require('cla/ci');
 
         var server = params.gradleServer;
         var appPath = params.appPath || "";
@@ -43,6 +43,12 @@ reg.register('service.gradle.task', {
 
         if (server == "") {
             log.fatal(_("No server selected"));
+        }
+        var serverCheck = ci.findOne({
+            mid: server + ''
+        });
+        if (!serverCheck) {
+            log.fatal(_("Server Resource doesn't exist"));
         }
 
         function remoteCommand(params, command, server, errors, user) {
