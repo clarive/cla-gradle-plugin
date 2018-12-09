@@ -1,6 +1,6 @@
 # Gradle plugin
 
-<img src="https://cdn.rawgit.com/clarive/cla-gradle-plugin/master/public/icon/gradle.svg?sanitize=true" alt="Gradle Plugin" title="Gradle Plugin" width="120" height="120">
+<img src="https://cdn.jsdelivr.net/gh/clarive/cla-gradle-plugin@master/public/icon/gradle.svg?sanitize=true" alt="Gradle Plugin" title="Gradle Plugin" width="120" height="120">
 
 Gradle plugin will allow you to launch Gradle commands to build your projects from a Clarive instance.
 
